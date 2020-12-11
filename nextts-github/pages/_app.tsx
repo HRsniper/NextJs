@@ -1,9 +1,13 @@
 import { AppProps } from "next/app";
-
-// import "../styles/globals.css"; //global css
+import { CssBaseline } from "@material-ui/core";
 
 function Root({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <CssBaseline />
+      <Component {...pageProps} />
+    </>
+  );
 }
 
 export default Root;
