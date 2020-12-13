@@ -1,10 +1,11 @@
 import { AppProps } from "next/app";
-import { CssBaseline } from "@material-ui/core";
+
+import "normalize.css/normalize.css";
+import "../styles/global.css";
 
 function Root({ Component, pageProps }: AppProps) {
   return (
     <>
-      <CssBaseline />
       <Component {...pageProps} />
     </>
   );

@@ -1,31 +1,21 @@
-import { GetStaticProps } from "next";
+import Link from "next/link";
+import { FormEvent, useState } from "react";
 
-import { UserInterface } from "../src/interfaces";
+import style from "../styles/index.module.css";
 
-const Home = ({ user }: UserInterface) => {
-  console.log(user);
+const Home = () => {
+  const [user, setUser] = useState("");
+
+  function handleSubmit(event: FormEvent) {
+    event.preventDefault();
+  }
+
   return (
-    <div>
-      <img src={user.avatar_url} alt="" />
-      <br />
-      <strong>{user.name}</strong>
-      <br />
-      <span>{user.bio}</span>
-    </div>
+    <form onSubmit={handleSubmit} className={style.form}>
+      <input type="text" onChange={(e) => setUser(e.target.value)} />
+      <Link href={`/user/${user}`}>Search</Link>
+    </form>
   );
 };
 
 export default Home;
-
-export const getStaticProps: GetStaticProps = async () => {
-  const response = await fetch(`https://api.github.com/users/HRsniper`);
-
-  const user = await response.json();
-
-  return {
-    props: {
-      user,
-    },
-    revalidate: 10,
-  };
-};

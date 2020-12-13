@@ -1,0 +1,36 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  background-color: #282a36;
+}
+
+.form input, .form a {
+  width: 90%;
+  padding: 1rem;
+  background-color: #44475A;
+  border:0;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.form a {
+  margin-top: 1rem;
+  text-align: center;
+  background-color: #50FA7B;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  padding: 0.6rem;
+}
+
+.form a:hover {
+  outline:auto;
+  background-color: #40ca63;
+}
+
+.form a:any-link {
+  color: #282A36;
+}

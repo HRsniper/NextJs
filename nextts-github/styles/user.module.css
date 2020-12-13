@@ -1,0 +1,36 @@
+.userLogin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  background-color: #282a36;
+  color: #fff;
+  font-size: 1.4rem;
+
+  position: relative;
+}
+
+.userLogin > a {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.userLogin h1 {
+  margin-bottom: 0;
+}
+
+.userLogin strong {
+  margin-bottom: 1rem;
+}
+
+.userLogin a:any-link {
+  color: #fff;
+}
+
+.userLogin img {
+  width: 24rem;
+  border-radius: 50%;
+}
