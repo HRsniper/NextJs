@@ -33,4 +33,5 @@
 .userLogin img {
   width: 24rem;
   border-radius: 50%;
+  /* object-fit: none; */
 }

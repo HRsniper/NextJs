@@ -1,4 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { ParsedUrlQuery } from "querystring";
@@ -40,7 +41,8 @@ const Login = ({ user }: UserInterface) => {
     <div className={style.userLogin}>
       <Link href="/">Back to search</Link>
 
-      <img alt={user.name} src={user.avatar_url} />
+      <Image alt={user.name} src={user.avatar_url} width={384} height={384} layout='fixed' />
+      {/* <img alt={user.name} src={user.avatar_url} /> */}
 
       <h1>{user.name}</h1>
 
