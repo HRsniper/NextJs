@@ -12,7 +12,7 @@ const Home = () => {
 
   return (
     <form onSubmit={handleSubmit} className={style.form}>
-      <input type="text" onChange={(e) => setUser(e.target.value)} />
+      <input type="text" onChange={(e) => setUser(e.target.value)} placeholder="Github Username" />
       <Link href={`/user/${user}`}>Search</Link>
     </form>
   );
